@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTech Store - Calculadora de Impacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-particles"></div>
+
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bolt-lightning logo__icon"></i>
+        <span>ECO<span class="logo__highlight">TECH</span></span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="produtos.html" class="nav__link">Produtos</a>
+        <a href="calculadora.html" class="nav__link active">Calculadora</a>
+        <a href="carrinho.html" class="nav__link">Carrinho <span class="cart-badge-nav" id="navCartCount">0</span></a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Simulador Energético Avançado</h2>
+        <p>Projete o seu ganho financeiro e mitigação de carbono anual</p>
+      </div>
+
+      <div class="calculator-card calculator-card--standalone">
+        <div class="calculator-inputs">
+          <div class="input-group">
+            <label for="billRange">Gasto mensal em energia: <span id="billVal">R$ 500</span></label>
+            <input type="range" id="billRange" min="100" max="5000" step="50" value="500">
+          </div>
+          <div class="input-group">
+            <label for="sunHours">Média de Irradiação Solar / Dia: <span id="sunVal">5.5 hrs</span></label>
+            <input type="range" id="sunHours" min="3" max="10" step="0.5" value="5.5">
+          </div>
+        </div>
+
+        <div class="calculator-results">
+          <div class="res-box">
+            <i class="fa-solid fa-piggy-bank text-neon"></i>
+            <div>
+              <small>Economia Projetada / Ano</small>
+              <h3 id="resSavings">R$ 5.400,00</h3>
+            </div>
+          </div>
+          <div class="res-box">
+            <i class="fa-solid fa-tree text-green"></i>
+            <div>
+              <small>Equivalente em Árvores</small>
+              <h3 id="resTrees">24 Árvores</h3>
+            </div>
+          </div>
+          <div class="res-box">
+            <i class="fa-solid fa-cloud-arrow-down text-cyan"></i>
+            <div>
+              <small>Redução de CO₂</small>
+              <h3 id="resCO2">1.8 Toneladas</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>&copy; 2026 EcoTech Store. Engenharia de Ponta Sustentável.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

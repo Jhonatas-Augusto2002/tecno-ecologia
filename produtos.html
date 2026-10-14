@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoTech Store - Produtos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-particles"></div>
+
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="logo">
+        <i class="fa-solid fa-bolt-lightning logo__icon"></i>
+        <span>ECO<span class="logo__highlight">TECH</span></span>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="index.html" class="nav__link">Início</a>
+        <a href="produtos.html" class="nav__link active">Produtos</a>
+        <a href="calculadora.html" class="nav__link">Calculadora</a>
+        <a href="carrinho.html" class="nav__link">Carrinho <span class="cart-badge-nav" id="navCartCount">0</span></a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Catálogo Tecnológico</h2>
+        <p>Componentes de alta performance com certificação eco-quântica</p>
+      </div>
+
+      <!-- Barra de Pesquisa Avançada -->
+      <div class="search-filter-wrapper">
+        <div class="search-bar search-bar--large">
+          <i class="fa-solid fa-magnifying-glass search-bar__icon"></i>
+          <input type="text" id="searchInput" placeholder="Pesquisar por especificações..." autocomplete="off">
+          <button id="clearSearchBtn" class="search-bar__clear" style="display: none;">&times;</button>
+        </div>
+      </div>
+
+      <!-- Filtros de Categoria -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-category="all"><i class="fa-solid fa-border-all"></i> Todos</button>
+        <button class="filter-btn" data-category="solar"><i class="fa-solid fa-sun"></i> Solares</button>
+        <button class="filter-btn" data-category="battery"><i class="fa-solid fa-car-battery"></i> Baterias</button>
+        <button class="filter-btn" data-category="wind"><i class="fa-solid fa-wind"></i> Eólica</button>
+        <button class="filter-btn" data-category="ev"><i class="fa-solid fa-charging-station"></i> EV Stations</button>
+      </div>
+
+      <!-- Grelha Dinâmica -->
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <p>&copy; 2026 EcoTech Store. Engenharia de Ponta Sustentável.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
